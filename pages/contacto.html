@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../estilos.css">
+    <title>Contacto</title>
+</head>
+
+<body>
+    <header>
+        <h1>Contactate</h1>
+        <ul type="circle">
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="sobre mi.html">Sobre Mi</a></li>
+            <li><a href="habilidades.html">Mis Habilidades</a></li>
+            <li><a href="proyectos.html">Proyectos</a></li>
+            <li><a href="#">Contacto</a></li>
+        </ul>
+    </header>
+    <main>
+        <section>
+            <div class="formulario">
+                <h2>Formulario</h2>
+                <form action="enviar.php" method="post" enctype="text/plain" netlify>
+                    <label for="nombre">nombre:</label>
+                    <input type="text" name="nombre" placeholder="escribe tu nombre" required><br>
+                    <label for="apellido">apellido:</label>
+                    <input type="text" name="apellido" placeholder="escribe tu apellido" required><br>
+                    <label for="mail">correo:</label>
+                    <input type="email" name="mail" placeholder="escribe tu email" required><br>
+                    <label for="contraseña">contraseña:</label>
+                    <input type="password" name="contraseña" placeholder="escribe tu contraseña" required><br>
+                    <label for="comentarios">comentarios:</label><br>
+                    <textarea name="comentarios" id="" cols="30" rows="5"
+                        placeholder="escribe tu comentario"></textarea><br>
+                    <input type="reset">
+                    <input type="button" value="enviar"><br>
+    
+                    <input type="radio" name="sexo">
+                    <label for="sexo">mujer</label>
+                    <input type="radio" name="sexo">
+                    <label for="sexo">hombre</label>
+                    <input type="radio" name="sexo">
+                    <label for="sexo">sin especificar</label><br>
+                </form>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>Copyrigth Todos los derechos reservados.</p>
+    </footer>
+</body>
+
+</html>
