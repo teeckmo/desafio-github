@@ -18,6 +18,8 @@ h1 {
     animation-name: rebotar;
     animation-duration: 3s;
 }
+/* animacion en el h1 */
+
 @keyframes rebotar{
     0%{
         opacity: 0;
@@ -59,36 +61,73 @@ li {
     position: relative;
     font-size: 16px;
 }
-
-a {
+.lista1 a{
     font-size: 20px;
     color: #000;
     text-decoration: none;
     margin: 10px 10px 10px 10px;
 }
 
-a:hover{
+.lista1 a:hover{
     color: rgb(184, 128, 8);
+}
+
+/* Lista De Pag Proyectos */
+
+.listaProyectos2{
+    text-align: center;
+}
+
+.listaProyectos2 li a{
+    color: #000;
+    text-decoration: none;
+}
+
+.listaProyectos2 li a:hover{
+    color: #fff;
+}
+
+/* Los ir de la pag principal*/
+
+.redireccion{
+    text-align: center;
+}
+
+.redireccion a{
+    text-align: center;
+    color: #000;
+    text-decoration: none;
+    text-align: center;
+}
+
+.redireccion a:hover{
+    color: #fff;
 }
 
 /* Proyectos */
 
 .contenedor{
     height: auto;
-    width: 100%;
+    width: 80%;
+    margin: 20px auto;
     display: grid;
-    grid-template-columns: repeat(4,1fr);
+    grid-template-columns: repeat(1, 1fr);
     grid-template-rows: 200px 200px 200px 200px;
-    grid-template-areas: "img1 img1 img1 img1"
-                        "img1 img1 img1 img1"
-                        "img2 img2 img2 img2"
-                        "img2 img2 img2 img2";
+    grid-template-areas: "img1"
+                        "img1"
+                        "img2"
+                        "img2";
 }
+                  /* TUTOR EN UNA CORRECCION ME DIJO COMO CENTRO LAS FOTOS PERO NO ENTENDI COMO HACERLO,ME LO PORDIA DECIR DE 
+                  NUEVO EN ESTA CORRECCION?.
+                  LA IMAGEN ME QUEDA MAL COMO LA DEJE AHORA, QUIERO QUE QUEDE CENTRADA BIEN LA IMAGEN Y LA POSISION
+                   PERO CON BACKGROUND-POSITION CENTER NO FUNCIONA, SERA POR LA RESOLUCION DE LA IMAGEN? */
 .item{
     border: 2px solid #000;
     border-radius: 10%;
     padding: 20px;
     margin: 10px;
+    background-size: cover;
 }
 .item1{
     background-image: url(pages/multimedia/pagina\ de\ nutricion.png);
@@ -106,18 +145,16 @@ a:hover{
     margin-bottom: 20px;
 }
 
+/* imagenes de la pag habilidades */
 
-
-/* imagenes de la pag habilidades*/
-
+.pagHabilidades{
+   text-align: center;
+}
 .pagHabilidades img{
     width: 30%;
     padding: 50px;
-    display: inline-block; 
-    
 }
 .pagHabilidades p{
-    text-align: center;
     padding: 10px;
     font-size: 16px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -137,46 +174,35 @@ p {
 
 /* Lenguajes de programacion pag principal */
 
+.lenguajes{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+}
 .lenguajes img{
     width: 10%;
-    height: auto;
-    margin: auto;
-    display: inline-block;
     padding: 10px;
 }
 
+
 /* Redes sociales pag principal */
 
-.fb {
-    height: auto;
-    width: 5%;
+.redesSociales{
     display: inline-block;
-    justify-content: left;
-}
-
-.ig {
-    display: inline-block;
-    justify-content: center;
-    height: auto;
-    width: 5%;
-}
-
-.ln {
-    display: inline;
-    justify-content: center;
-    height: auto;
-    width: 5%;
-}
-
-.wp {
-    display: inline-flexbox;
-    justify-content: center;
-    height: auto;
-    width: 5%;
-}
-
-div {
     text-align: center;
+}
+.fb{
+    width: 5%;
+}
+.ig{
+    width: 5%;
+}
+.ln{
+    width: 5%;
+}
+.wp{
+    width: 5%;
 }
 
 /* Sobre Mi, Foto */
@@ -190,6 +216,11 @@ div {
 .sobreMi span{
     color: #000;
 }
+.fotoMia{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
 .fotoMia img{
     width: 30%;
     height: auto;
@@ -197,35 +228,152 @@ div {
     border-radius: 20%;
 }
 /* Footer */
+
 footer{
     margin-top: 100px;
 }
+
 footer p{
     font-size: 30px;
     font-family: 'Times New Roman', Times, serif;
     color: #000;
 }
+
+/* iframe y mapa */
+
+.mapa{
+    text-align: center;
+}
+
 iframe{
     width: 200px;
     height: 100px; 
     border-radius: 15%;
 }
+/* Pag Contacto */
+
 .formulario{
-    margin-top: 100px;
+    text-align: center;
+    margin-top: 113px;
 }
-@media only screen and (max-width:360px){
+                                                      /* MEDIA QUERIS */
+/* imagenes de grid proyecto inicia */
+
+@media only screen and (min-width: 350px) and (max-width:400px){
     .contenedor{
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+@media only screen and (min-width: 400px) and (max-width:768px){
+    .contenedor{
+        grid-template-columns: repeat(1,1fr);
+    }
+}
+@media only screen and (min-width: 400px) and (max-width:768px){
+    .contenedor{
+        grid-template-columns: repeat(1,1fr);
+    }
+}
+@media only screen and (min-width: 1040px) and (max-width:1320){
+    .contenedor{
+        grid-template-columns: repeat(1,1fr);
     }
 }
 
+/* imagenes de grid proyecto fin */
+
+/* lenguajes paguina principal inicia */
+
+@media only screen and (min-width: 230px) and (max-width:400px){
+    .lenguajes img{
+        width: 20%;
+    }
+}
+@media only screen and (min-width: 400px) and (max-width:768px){
+    .lenguajes img{
+        width: 20%;
+    }
+}
+@media only screen and (min-width: 768px) and (max-width:1040){
+    .lenguajes img{
+        width: 20%;
+    }
+}
+@media only screen and (min-width: 1040px) and (max-width:1320){
+    .lenguajes img{
+        width: 20%;
+    }
+}
+
+/* lenguajes paguina principal fin */
+
+/* redes solciales paguina principal inicia */
+
+@media only screen and (min-width: 230px) and (max-width:400px){
+    .fb{
+        width: 10%;
+    }
+    .ig{
+        width: 10%;
+    }
+    .ln{
+        width: 10%;
+    }
+    .wp{
+        width: 10%;
+    }
+}
+@media only screen and (min-width: 400px) and (max-width:768px){
+    .fb{
+        width: 10%;
+    }
+    .ig{
+        width: 10%;
+    }
+    .ln{
+        width: 10%;
+    }
+    .wp{
+        width: 10%;
+    }
+}
+/* redes solciales paguina principal fin */
+
+ /* foto mia paguina sobre mi inicia*/
+ @media only screen and (min-width: 230px) and (max-width:400px){
+    .fotoMia img{
+        width: 20%;
+        
+    }
+ }
+ 
+ /* foto mia paguina sobre mi fin */
+
+ /* paguina habilidades iconos inicia */
+ @media only screen and (min-width: 230px) and (max-width:400px){
+    .pagHabilidades img{
+        width: 50%;
+    }
+ }
+ @media only screen and (min-width: 400px) and (max-width:768px){
+    .pagHabilidades img{
+        width: 50%;
+    }
+ }
+ @media only screen and (min-width: 768px) and (max-width:1040){
+    .pagHabilidades img{
+        width: 40%;
+    }
+ }
+ @media only screen and (min-width: 1040px) and (max-width:1320){
+    .pagHabilidades img{
+        width: 30%;
+    }
+ }
+ /* paguina habilidades iconos fin */
 
 
-/*tutor al momento de corregir si sabe a que aplicarle flex grid y
- las media queris le pido de favor que lo aga y me lo pase para ver 
-la correccion por que le juro que no le encuentro la vuelta a esto,
-disculpeme pero no le encuentro la vuelta.*/
 
-/* Lo de sobre mi cuando le cambio y aplico camelcase se me rompe todo 
-y nose como arreglarlo por eso lo dejare asi hasta saber como solucionarlo,
- si me puede dar alguna ayuda con eso estaria super agradecido*/
+/* YA SOLUCIONE LO DE EL ARCHIVO INDEX QUE ANTES SE LLAMABA sobre mi Y AHORA SE LLAMA sobreMi Y AL CORREGIRLO SE ME ROMPIA EL CODIGO
+LO SOLUCIONE Y LE APLIQUE CAMELCASE,  Y TAMBIEN CORREGI LAS DEMAS CORRECCIONES QUE ME HIZO EN EL CODIGO*/
+/* GRACIAS TUTOR POR LAS CORRECCIONES, GRACIAS A USTED EH MEJORADO MUCHO MAS POR MIS ERRORES QUE POR LO QUE ESTUDIO */
