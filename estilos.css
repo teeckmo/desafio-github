@@ -89,6 +89,7 @@ li {
 }
 
 .redireccion a {
+  padding: 5px;
   text-align: center;
   color: #000;
   text-decoration: none;
@@ -244,9 +245,35 @@ iframe {
 .formulario {
   text-align: center;
   margin-top: 113px;
+  border-style: dotted;
+}
+
+label {
+  font-size: 20px;
+  background-color: #fff;
+  border-radius: 25%;
 }
 
 /* MEDIA QUERIS */
+/* Texto pag principal inicia */
+@media only screen and (min-width: 350px) and (max-width: 400px) {
+  .teexxto {
+    width: 300px;
+  }
+}
+@media only screen and (min-width: 350px) and (max-width: 400px) {
+  .parrafo {
+    width: 300px;
+  }
+}
+/* Texto pag principal fin */
+/* Texto pag sobreMi inicia */
+@media only screen and (min-width: 350px) and (max-width: 400px) {
+  .sobreMi P {
+    width: 300px;
+  }
+}
+/* Texto sobreMi fin */
 /* imagenes de grid proyecto inicia */
 @media only screen and (min-width: 350px) and (max-width: 400px) {
   .contenedor {
@@ -322,7 +349,27 @@ iframe {
 }
 /* redes solciales paguina principal fin */
 /* foto mia paguina sobre mi inicia*/
+@media only screen and (min-width: 230px) {
+  .fotoMia img {
+    width: 20%;
+  }
+}
 @media only screen and (min-width: 230px) and (max-width: 400px) {
+  .fotoMia img {
+    width: 60%;
+  }
+}
+@media only screen and (min-width: 400px) and (max-width: 768px) {
+  .fotoMia img {
+    width: 40%;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1040) {
+  .fotoMia img {
+    width: 30%;
+  }
+}
+@media only screen and (min-width: 1040px) and (max-width: 1320) {
   .fotoMia img {
     width: 20%;
   }
@@ -331,7 +378,7 @@ iframe {
 /* paguina habilidades iconos inicia */
 @media only screen and (min-width: 230px) and (max-width: 400px) {
   .pagHabilidades img {
-    width: 50%;
+    width: 70%;
   }
 }
 @media only screen and (min-width: 400px) and (max-width: 768px) {
@@ -350,7 +397,19 @@ iframe {
   }
 }
 /* paguina habilidades iconos fin */
-/* Cuando acomodo el codigo en el scss se me rompe el codigo asi que por el momento lo dejo asi hasta que averigue 
-como solucionarlo y lo de las etiquetas Br tambien,no tuve tiempo */
+/* paguina habilidades texto inicia */
+@media only screen and (min-width: 350px) and (max-width: 400px) {
+  .pagHabilidades p {
+    width: 300px;
+  }
+}
+/* paguina habilidades texto fin */
+/* Footer inicio*/
+@media only screen and (min-width: 350px) and (max-width: 400px) {
+  footer p {
+    width: 300px;
+  }
+}
+/* Footer fin*/
 
 /*# sourceMappingURL=estilos.css.map */
