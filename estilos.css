@@ -40,7 +40,7 @@ body {
   background-image: linear-gradient(rgb(184, 128, 8), rgb(124, 106, 72));
 }
 
-/* Lista desordenada */
+/* Lista desordenada general */
 ul li a {
   list-style: none;
   color: #fff;
@@ -69,7 +69,7 @@ li {
   color: rgb(184, 128, 8);
 }
 
-/* Lista De Pag Proyectos */
+/* Lista De Pagina Proyectos */
 .listaProyectos2 {
   text-align: center;
 }
@@ -83,7 +83,7 @@ li {
   color: #fff;
 }
 
-/* Los ir de la pag principal*/
+/* Los enlaces Ir de la pagina principal*/
 .redireccion {
   text-align: center;
 }
@@ -100,7 +100,7 @@ li {
   color: #fff;
 }
 
-/* Proyectos */
+/* Pagina Proyectos */
 .contenedor {
   height: auto;
   width: 80%;
@@ -135,7 +135,7 @@ li {
   margin-bottom: 20px;
 }
 
-/* imagenes de la pag habilidades */
+/* imagenes de la pagina habilidades */
 .pagHabilidades {
   text-align: center;
 }
@@ -151,7 +151,7 @@ li {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-/* Texto de la paguina principal y demas*/
+/* Texto de la paguina principal y general*/
 p {
   width: 400px;
   margin-left: auto;
@@ -162,7 +162,7 @@ p {
   color: #fff;
 }
 
-/* Lenguajes de programacion pag principal */
+/* Lenguajes de programacion pagina principal */
 .lenguajes, .fotoMia {
   display: flex;
   flex-direction: row;
@@ -174,7 +174,7 @@ p {
   padding: 10px;
 }
 
-/* Redes sociales pag principal */
+/* Redes sociales pagina principal */
 .redesSociales {
   display: inline-block;
   text-align: center;
@@ -196,7 +196,7 @@ p {
   width: 5%;
 }
 
-/* Sobre Mi, Foto */
+/* Pagina Sobre Mi, Foto */
 .sobreMi {
   padding: 5px;
   width: auto;
@@ -230,6 +230,10 @@ footer p {
   color: #000;
 }
 
+.footer1 {
+  margin-top: 479px;
+}
+
 /* iframe y mapa */
 .mapa {
   text-align: center;
@@ -241,21 +245,165 @@ iframe {
   border-radius: 15%;
 }
 
-/* Pag Contacto */
-.formulario {
+/* Pagina Contacto */
+html {
+  height: 100% 100%;
+}
+
+.login-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  padding: 40px;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.5);
+  box-sizing: border-box;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+}
+
+.login-box h2 {
+  margin: 0 0 30px;
+  padding: 0;
+  color: #fff;
   text-align: center;
-  margin-top: 113px;
-  border-style: dotted;
 }
 
-label {
-  font-size: 20px;
-  background-color: #fff;
-  border-radius: 25%;
+.login-box .user-box {
+  position: relative;
 }
 
+.login-box .user-box input {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #fff;
+  margin-bottom: 30px;
+  border: none;
+  border-bottom: 1px solid #fff;
+  outline: none;
+  background: transparent;
+}
+
+.login-box .user-box label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #fff;
+  pointer-events: none;
+  transition: 0.5s;
+}
+
+.login-box .user-box input:focus ~ label,
+.login-box .user-box input:valid ~ label {
+  top: -20px;
+  left: 0;
+  color: #03e9f4;
+  font-size: 12px;
+}
+
+.login-box form a {
+  position: relative;
+  display: inline-block;
+  padding: 10px 20px;
+  color: #03e9f4;
+  font-size: 16px;
+  text-decoration: none;
+  text-transform: uppercase;
+  overflow: hidden;
+  transition: 0.5s;
+  margin-top: 40px;
+  letter-spacing: 4px;
+}
+
+.login-box a:hover {
+  background: #03e9f4;
+  color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 5px #03e9f4, 0 0 25px #03e9f4, 0 0 50px #03e9f4, 0 0 100px #03e9f4;
+}
+
+.login-box a span {
+  position: absolute;
+  display: block;
+}
+
+.login-box a span:nth-child(1) {
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #03e9f4);
+  animation: btn-anim1 1s linear infinite;
+}
+
+@keyframes btn-anim1 {
+  0% {
+    left: -100%;
+  }
+  50%, 100% {
+    left: 100%;
+  }
+}
+.login-box a span:nth-child(2) {
+  top: -100%;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, #03e9f4);
+  animation: btn-anim2 1s linear infinite;
+  animation-delay: 0.25s;
+}
+
+@keyframes btn-anim2 {
+  0% {
+    top: -100%;
+  }
+  50%, 100% {
+    top: 100%;
+  }
+}
+.login-box a span:nth-child(3) {
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(270deg, transparent, #03e9f4);
+  animation: btn-anim3 1s linear infinite;
+  animation-delay: 0.5s;
+}
+
+@keyframes btn-anim3 {
+  0% {
+    right: -100%;
+  }
+  50%, 100% {
+    right: 100%;
+  }
+}
+.login-box a span:nth-child(4) {
+  bottom: -100%;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(360deg, transparent, #03e9f4);
+  animation: btn-anim4 1s linear infinite;
+  animation-delay: 0.75s;
+}
+
+@keyframes btn-anim4 {
+  0% {
+    bottom: -100%;
+  }
+  50%, 100% {
+    bottom: 100%;
+  }
+}
 /* MEDIA QUERIS */
-/* Texto pag principal inicia */
+/* Texto pagina principal inicia */
 @media only screen and (min-width: 350px) and (max-width: 400px) {
   .teexxto {
     width: 300px;
@@ -266,15 +414,15 @@ label {
     width: 300px;
   }
 }
-/* Texto pag principal fin */
+/* Texto pagina principal fin */
 /* Texto pag sobreMi inicia */
 @media only screen and (min-width: 350px) and (max-width: 400px) {
   .sobreMi P {
     width: 300px;
   }
 }
-/* Texto sobreMi fin */
-/* imagenes de grid proyecto inicia */
+/* Texto pagina sobreMi fin */
+/* imagenes de grid pagina proyecto inicia */
 @media only screen and (min-width: 350px) and (max-width: 400px) {
   .contenedor {
     grid-template-columns: repeat(1, 1fr);
@@ -295,8 +443,8 @@ label {
     grid-template-columns: repeat(1, 1fr);
   }
 }
-/* imagenes de grid proyecto fin */
-/* lenguajes paguina principal inicia */
+/* imagenes de grid pagina proyecto fin */
+/* lenguajes pagina principal inicia */
 @media only screen and (min-width: 230px) and (max-width: 400px) {
   .lenguajes img, .fotoMia img {
     width: 20%;
@@ -317,8 +465,8 @@ label {
     width: 20%;
   }
 }
-/* lenguajes paguina principal fin */
-/* redes solciales paguina principal inicia */
+/* lenguajes pagina principal fin */
+/* redes solciales pagina principal inicia */
 @media only screen and (min-width: 230px) and (max-width: 400px) {
   .fb {
     width: 10%;
@@ -347,7 +495,7 @@ label {
     width: 10%;
   }
 }
-/* redes solciales paguina principal fin */
+/* redes solciales pagina principal fin */
 /* foto mia paguina sobre mi inicia*/
 @media only screen and (min-width: 230px) {
   .fotoMia img {

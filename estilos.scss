@@ -1,10 +1,10 @@
 $color1: rgb(184, 128, 8);
 $color2: rgb(6, 50, 56);
-$color3:#fff;
+$color3: #fff;
 $color4: #000;
 
 
-$estilos:(
+$estilos: (
     color:#fff
 );
 
@@ -24,7 +24,7 @@ h1 {
     font-size: 40px;
     text-align: center;
     padding: 10px;
-    color:$color1;
+    color: $color1;
     animation-name: rebotar;
     animation-duration: 3s;
 }
@@ -54,7 +54,7 @@ body {
     background-image: linear-gradient(rgb(184, 128, 8), rgb(124, 106, 72));
 }
 
-/* Lista desordenada */
+/* Lista desordenada general */
 
 ul li a {
     list-style: none;
@@ -84,7 +84,7 @@ li {
     color: $color1;
 }
 
-/* Lista De Pag Proyectos */
+/* Lista De Pagina Proyectos */
 
 .listaProyectos2 {
     text-align: center;
@@ -99,7 +99,7 @@ li {
     color: $color3;
 }
 
-/* Los ir de la pag principal*/
+/* Los enlaces Ir de la pagina principal*/
 
 .redireccion {
     text-align: center;
@@ -117,7 +117,7 @@ li {
     color: $color3;
 }
 
-/* Proyectos */
+/* Pagina Proyectos */
 
 .contenedor {
     height: auto;
@@ -158,7 +158,7 @@ li {
     margin-bottom: 20px;
 }
 
-/* imagenes de la pag habilidades */
+/* imagenes de la pagina habilidades */
 
 .pagHabilidades {
     text-align: center;
@@ -175,9 +175,9 @@ li {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-/* Texto de la paguina principal y demas*/
+/* Texto de la paguina principal y general*/
 
-p{
+p {
     width: 400px;
     margin-left: auto;
     margin-right: auto;
@@ -188,7 +188,7 @@ p{
 }
 
 
-/* Lenguajes de programacion pag principal */
+/* Lenguajes de programacion pagina principal */
 
 .lenguajes {
     display: flex;
@@ -203,7 +203,7 @@ p{
 }
 
 
-/* Redes sociales pag principal */
+/* Redes sociales pagina principal */
 
 .redesSociales {
     display: inline-block;
@@ -226,7 +226,7 @@ p{
     width: 5%;
 }
 
-/* Sobre Mi, Foto */
+/* Pagina Sobre Mi, Foto */
 
 .sobreMi {
     padding: 5px;
@@ -238,8 +238,9 @@ p{
 .sobreMi span {
     color: $color4;
 }
-.teexxto{
-    color: map-get($estilos, color )
+
+.teexxto {
+    color: map-get($estilos, color)
 }
 
 .fotoMia {
@@ -264,6 +265,9 @@ footer p {
     font-family: 'Times New Roman', Times, serif;
     color: $color4;
 }
+.footer1{
+    margin-top: 479px;
+}
 
 /* iframe y mapa */
 
@@ -271,54 +275,216 @@ footer p {
     text-align: center;
 }
 
-@mixin sizes($width, $height){
+@mixin sizes($width, $height) {
     width: $width;
     height: $height;
-    border-radius:15% ;
+    border-radius: 15%;
 }
 
 iframe {
     @include sizes(200px, 100px)
 }
 
-/* Pag Contacto */
+/* Pagina Contacto */
 
-.formulario {
+html {
+    height: 100% 100%;
+}
+
+.login-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    padding: 40px;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, .5);
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, .6);
+    border-radius: 10px;
+}
+
+.login-box h2 {
+    margin: 0 0 30px;
+    padding: 0;
+    color: #fff;
     text-align: center;
-    margin-top: 113px;
-    border-style:dotted;
-}
-label{
-    font-size: 20px;
-    background-color: #fff;
-    border-radius: 25%;
 }
 
+.login-box .user-box {
+    position: relative;
+}
+
+.login-box .user-box input {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    margin-bottom: 30px;
+    border: none;
+    border-bottom: 1px solid #fff;
+    outline: none;
+    background: transparent;
+}
+
+.login-box .user-box label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.login-box .user-box input:focus~label,
+.login-box .user-box input:valid~label {
+    top: -20px;
+    left: 0;
+    color: #03e9f4;
+    font-size: 12px;
+}
+
+.login-box form a {
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    color: #03e9f4;
+    font-size: 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+    overflow: hidden;
+    transition: .5s;
+    margin-top: 40px;
+    letter-spacing: 4px
+}
+
+.login-box a:hover {
+    background: #03e9f4;
+    color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #03e9f4,
+        0 0 25px #03e9f4,
+        0 0 50px #03e9f4,
+        0 0 100px #03e9f4;
+}
+
+.login-box a span {
+    position: absolute;
+    display: block;
+}
+
+.login-box a span:nth-child(1) {
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #03e9f4);
+    animation: btn-anim1 1s linear infinite;
+}
+
+@keyframes btn-anim1 {
+    0% {
+        left: -100%;
+    }
+
+    50%,
+    100% {
+        left: 100%;
+    }
+}
+
+.login-box a span:nth-child(2) {
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, #03e9f4);
+    animation: btn-anim2 1s linear infinite;
+    animation-delay: .25s
+}
+
+@keyframes btn-anim2 {
+    0% {
+        top: -100%;
+    }
+
+    50%,
+    100% {
+        top: 100%;
+    }
+}
+
+.login-box a span:nth-child(3) {
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, transparent, #03e9f4);
+    animation: btn-anim3 1s linear infinite;
+    animation-delay: .5s
+}
+
+@keyframes btn-anim3 {
+    0% {
+        right: -100%;
+    }
+
+    50%,
+    100% {
+        right: 100%;
+    }
+}
+
+.login-box a span:nth-child(4) {
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent, #03e9f4);
+    animation: btn-anim4 1s linear infinite;
+    animation-delay: .75s
+}
+
+@keyframes btn-anim4 {
+    0% {
+        bottom: -100%;
+    }
+
+    50%,
+    100% {
+        bottom: 100%;
+    }
+}
 
 /* MEDIA QUERIS */
 
-/* Texto pag principal inicia */
-@media only screen and (min-width: 350px) and (max-width:400px){
-    .teexxto{
+/* Texto pagina principal inicia */
+@media only screen and (min-width: 350px) and (max-width:400px) {
+    .teexxto {
         width: 300px;
     }
 }
-@media only screen and (min-width: 350px) and (max-width:400px){
-    .parrafo{
+
+@media only screen and (min-width: 350px) and (max-width:400px) {
+    .parrafo {
         width: 300px;
     }
 }
-/* Texto pag principal fin */
+
+/* Texto pagina principal fin */
 
 /* Texto pag sobreMi inicia */
-@media only screen and (min-width: 350px) and (max-width:400px){
-    .sobreMi P{
+@media only screen and (min-width: 350px) and (max-width:400px) {
+    .sobreMi P {
         width: 300px;
     }
 }
-/* Texto sobreMi fin */
 
-/* imagenes de grid proyecto inicia */
+/* Texto pagina sobreMi fin */
+
+/* imagenes de grid pagina proyecto inicia */
 
 @media only screen and (min-width: 350px) and (max-width:400px) {
     .contenedor {
@@ -344,9 +510,9 @@ label{
     }
 }
 
-/* imagenes de grid proyecto fin */
+/* imagenes de grid pagina proyecto fin */
 
-/* lenguajes paguina principal inicia */
+/* lenguajes pagina principal inicia */
 
 @media only screen and (min-width: 230px) and (max-width:400px) {
     .lenguajes img {
@@ -372,9 +538,9 @@ label{
     }
 }
 
-/* lenguajes paguina principal fin */
+/* lenguajes pagina principal fin */
 
-/* redes solciales paguina principal inicia */
+/* redes solciales pagina principal inicia */
 
 @media only screen and (min-width: 230px) and (max-width:400px) {
     .fb {
@@ -412,35 +578,40 @@ label{
     }
 }
 
-/* redes solciales paguina principal fin */
+/* redes solciales pagina principal fin */
 
 /* foto mia paguina sobre mi inicia*/
-@media only screen and (min-width:230px){
-    .fotoMia img{
+@media only screen and (min-width:230px) {
+    .fotoMia img {
         width: 20%;
     }
 }
+
 @media only screen and (min-width:230px) and (max-width:400px) {
-    .fotoMia img{
+    .fotoMia img {
         width: 60%;
 
     }
 }
-@media only screen and (min-width:400px) and (max-width:768px){
-    .fotoMia img{
+
+@media only screen and (min-width:400px) and (max-width:768px) {
+    .fotoMia img {
         width: 40%;
     }
 }
-@media only screen and (min-width: 768px) and (max-width:1040){
-    .fotoMia img{
+
+@media only screen and (min-width: 768px) and (max-width:1040) {
+    .fotoMia img {
         width: 30%;
     }
 }
-@media only screen and (min-width: 1040px) and (max-width:1320){
-    .fotoMia img{
+
+@media only screen and (min-width: 1040px) and (max-width:1320) {
+    .fotoMia img {
         width: 20%;
     }
 }
+
 /* foto mia paguina sobre mi fin */
 
 /* paguina habilidades iconos inicia */
@@ -467,21 +638,23 @@ label{
         width: 30%;
     }
 }
+
 /* paguina habilidades iconos fin */
 
 /* paguina habilidades texto inicia */
-@media only screen and (min-width: 350px) and (max-width:400px){
-    .pagHabilidades p{
+@media only screen and (min-width: 350px) and (max-width:400px) {
+    .pagHabilidades p {
         width: 300px;
     }
 }
+
 /* paguina habilidades texto fin */
 
-
 /* Footer inicio*/
-@media only screen and (min-width: 350px) and (max-width:400px){
-    footer p{
+@media only screen and (min-width: 350px) and (max-width:400px) {
+    footer p {
         width: 300px;
     }
 }
+
 /* Footer fin*/

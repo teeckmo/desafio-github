@@ -21,35 +21,34 @@
         </ul>
     </header>
     <main>
-        <section>
-            <div class="formulario">
-                <h2>Formulario</h2>
-                <form action="enviar.php" method="post" enctype="text/plain" netlify>
-                    <label for="nombre">Nombre:</label>
-                    <input type="text" name="nombre" placeholder="Escribe tu nombre" required><br>
-                    <label for="apellido">Apellido:</label>
-                    <input type="text" name="apellido" placeholder="Escribe tu apellido" required><br>
-                    <label for="mail">Correo:</label>
-                    <input type="email" name="mail" placeholder="Escribe tu email" required><br>
-                    <label for="contraseña">Contraseña:</label>
-                    <input type="password" name="contraseña" placeholder="Escribe tu contraseña" required><br>
-                    <label for="comentarios">Comentarios:</label><br>
-                    <textarea class="textarea1" name="comentarios" id="" cols="30" rows="5"
-                        placeholder="Escribe tu comentario"></textarea><br>
-                    <input type="reset">
-                    <input type="button" value="enviar"><br>
-    
-                    <input type="radio" name="sexo">
-                    <label for="sexo">Mujer</label>
-                    <input type="radio" name="sexo">
-                    <label for="sexo">Hombre</label>
-                    <input type="radio" name="sexo">
-                    <label for="sexo">Sin Especificar</label><br>
-                </form>
-            </div>
-        </section>
+        <!-- Formulario Inicia -->
+        <div class="login-box">
+            <h2>Contactate</h2>
+            <form>
+                <div class="user-box">
+                    <input type="text" name="" required="">
+                    <label>Nombre Y Apellido</label>
+                </div>
+                <div class="user-box">
+                    <input type="text" name="" required="">
+                    <label>Correo</label>
+                </div>
+                <div class="user-box">
+                    <input type="password" name="" required="">
+                    <label>Contraseña</label>
+                </div>
+                <a href="#">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    Ingresar
+                </a>
+            </form>
+        </div>
+        <!-- Formulario Termina -->
     </main>
-    <footer>
+    <footer class="footer1">
         <p>Copyrigth Todos los derechos reservados.</p>
     </footer>
 </body>
